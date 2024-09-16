@@ -1,0 +1,12 @@
+p[style="color: green"]
+  = notice
+h1.text-3xl.font-bold.underline
+  | Posts
+br
+#posts
+  - @posts.each do |post|
+    = render post
+    p
+      = link_to "Show this post", post
+br
+= link_to "New post", new_post_path, class: "bg-blue-300 text-white font-normal rounded-md text-md p-2"
